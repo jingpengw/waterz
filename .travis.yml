@@ -1,7 +1,6 @@
 language: python
 
 python:
-- '3.5'
 - '3.6'
 - '3.7-dev'
 - '3.8'
@@ -40,10 +39,6 @@ after_success:
     python -m pip install twine
     python -m twine upload wheelhouse/waterz*.whl
   fi
-
-matrix:
-  allow_failures:
-  - python: 3.8
 
 notifications:
   email: false
