@@ -47,9 +47,12 @@ segmentations = waterz.agglomerate(affinities, thresholds)
 
 # Development
 ## Release to pypi
+We use travis to create release
 
-We can only release code and compile in the installation machine.
+upgrade the version number in the `setup.py` file, then
 ```
-python setup.py sdist
-twine upload dist/my-new-wheel
+git tag -a v1.4 -m "my version 1.4"
+git commit -a -m "my comments"
+git push
 ```
+the travis build system will get a `TRAVIS_TAG` variable, and triger the `twine upload` command.
