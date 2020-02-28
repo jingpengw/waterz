@@ -51,8 +51,7 @@ We use travis to create release
 
 upgrade the version number in the `setup.py` file, then
 ```
-git tag -a v1.4 -m "my version 1.4"
 git commit -a -m "my comments"
-git push
+git push origin v0.9.5
 ```
 the travis build system will get a `TRAVIS_TAG` variable, and triger the `twine upload` command.
